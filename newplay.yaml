@@ -1,0 +1,12 @@
+---
+ - hosts: slaves
+   become: yes
+   tasks :
+    - name : Installing Nano, Wget, cURL and Git
+      yum  : pkg=nano,wget,git,curl state=installed
+
+    # remote_user: vagrant
+    # roles:
+    #     - rust
+
+    
